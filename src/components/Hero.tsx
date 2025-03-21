@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
-import Background from "@/assets/main-banner.png";
+import Background from "@/assets/main-banner.jpg";
 
 const Hero: React.FC = () => {
    const [loaded, setLoaded] = useState(false);
