@@ -1,0 +1,95 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 18%;
+
+    --primary: 145 42% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 40% 94%;
+    --secondary-foreground: 35 50% 15%;
+
+    --muted: 220 13% 95%;
+    --muted-foreground: 215 25% 40%;
+
+    --accent: 210 100% 97%;
+    --accent-foreground: 215 25% 18%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 145 42% 46%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  * {
+    @apply border-border selection:bg-leaf-200 selection:text-leaf-900;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .glass-morphism {
+    @apply backdrop-blur-lg bg-white/70 border border-white/20 shadow-soft;
+  }
+  
+  .glass-card {
+    @apply backdrop-blur-md bg-white/60 border border-white/30 shadow-elegant;
+  }
+  
+  .section-padding {
+    @apply py-24 sm:py-32;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .prose-elegant {
+    @apply prose prose-slate prose-p:text-foreground/80 prose-headings:text-foreground 
+    prose-headings:font-normal prose-strong:font-medium prose-strong:text-foreground
+    prose-a:text-leaf-600 prose-a:no-underline hover:prose-a:text-leaf-700
+    prose-a:transition-colors prose-a:duration-200
+    prose-img:rounded-lg prose-img:shadow-elegant max-w-none;
+  }
+}
